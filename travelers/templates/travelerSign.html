@@ -42,13 +42,15 @@ Refunds</a>
 
 <div id="id01" class="modal">
   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span>
-  <form class="modal-content" name='registration' onSubmit="return formValidation();">
+  <!-- FORM starts here -->
+  <form class="modal-content" name='registration' method="POST" onSubmit="return formValidation();">
     <div class="container">
       <h1>Sign Up</h1>
       <p>Please fill in this form to create an account.</p>
       <hr>
+      {% csrf_token %}
       <label for="name"><b>Full Name</b></label>
-      <input type="text" placeholder="Full Name" name="Full-name" required>
+      <input type="text" placeholder="Full Name" name="fullname" required>
 
       <label for="email"><b>Email</b></label>
       <input type="text" placeholder="Enter Email" name="email">
@@ -56,8 +58,9 @@ Refunds</a>
       <label for="phone"><b>Contact No.</b></label>
       <input type="text" id="phone" name="phone" pattern="[0-9]{11}" placeholder="Enter 11 digit phone no." required>
 
-      <label for="passport"><b>Passport No.</b></label>
-      <input type="text" name="passport" pattern="(B)(M)[0-9]{7}" placeholder="BM 7-digits" required>
+      <!-- TODO: Passport Work -->
+      <!-- <label for="passport"><b>Passport No.</b></label>
+      <input type="text" name="passport" pattern="(B)(M)[0-9]{7}" placeholder="BM 7-digits" required> -->
 
       <label for="passid"><b>Password</b></label>
       <input type="password" id="passid"  placeholder="Enter Password" name="psw" required>
@@ -70,7 +73,8 @@ Refunds</a>
 
       <div class="clearfix">
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" style="color: black;">Cancel</button>
-        <button class="btn signupbtn" type="submit">Sign Up</button>
+        <!-- <button class="btn signupbtn" type="submit">Sign Up</button> -->
+        <input type="submit" class="btn" value="Sign up" />
       </div>
     </div>
   </form>

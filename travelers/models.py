@@ -10,3 +10,10 @@ class TravelersPost(models.Model):
     airlines_name = models.CharField(max_length=50)
     email = models.EmailField()
     contact_no = models.IntegerField()
+
+
+class Traveler(models.Model):
+    fullname = models.CharField(max_length=50)
+    email = models.EmailField()
+    phone = models.IntegerField()
+    password = models.CharField(max_length=50)

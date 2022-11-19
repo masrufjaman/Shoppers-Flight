@@ -97,10 +97,11 @@ alert("Password should not be empty / length must be between "+mx+" to "+my);
 passid.focus();
 return false;
 }
-alert('Form Succesfully Submitted');
-window.location.href= 'index.html'
-return true;
-}
+// return to homepage
+// alert('Form Succesfully Submitted');
+// window.location.href= 'index.html'
+// return true;
+// }
 
 
 

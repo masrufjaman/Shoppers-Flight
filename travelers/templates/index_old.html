@@ -3,16 +3,14 @@
 <title>Laggage Party</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="indexStyle.css">
-
 <body >
 
 <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;" id="mySidebar">
   <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">&times;</button>
-  <a href="index.html" class="w3-bar-item w3-button">Home</a>
+  <a href="{% url 'land-page'%}" class="w3-bar-item w3-button">Home</a>
   <a href="#" class="w3-bar-item w3-button">Account Information</a>
   <a href="#" class="w3-bar-item w3-button">My Requests</a>
-  <a href="flightDetails.html" class="w3-bar-item w3-button">Post Requests</a>
+  <a href="{% url 'post-request'%}" class="w3-bar-item w3-button">Post Requests</a>
   <a href="flightDetails.html" class="w3-bar-item w3-button">Flight Details</a>
   <a href="#" class="w3-bar-item w3-button">Complaints</a>
   <a href="#" class="w3-bar-item w3-button">Payments &
@@ -36,24 +34,25 @@ Refunds</a>
 <img src="https://png.pngtree.com/background/20210709/original/pngtree-simple-summer-tourism-travel-picture-image_916927.jpg" alt="Car" style="width:100%;">
 
 <div class="w3-container">
-<form action="travelerSign.html">
-  <center>
-<button class="btn btn-primary" style="width:auto;"> Become A Traveler
-</button>
-</center>
-</form>
-<form action="CustomerSign.html">
-  <center>
-<button class="btn btn-primary" style="width:auto;"> Become A Customer
-</button>
-</center>
-</form>
+<p></p>
 
 </div>
 
 </div>
 
-<script src="indexScript.js"></script>
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
 
 </body>
 </html>

@@ -12,16 +12,20 @@ def post_request(request):
 
 
 def sign_up(request):
-    if request.method == 'POST':
-        fullname = request.POST['fullname']
-        email = request.POST['email']
-        phone = request.POST['phone']
-        password = request.POST['psw']
+    if request.method == "POST":
+        if request.POST.get("register"):
+            fullname = request.POST["fullname"]
+            email = request.POST["email"]
+            phone = request.POST["phone"]
+            password = request.POST["psw"]
 
-        user = Traveler.objects.create(
-                    fullname=fullname, email=email, phone=phone, password=password)
-        user.save()
+            user = Traveler.objects.create(
+                fullname=fullname, email=email, phone=phone, password=password
+            )
+            user.save()
 
-        return redirect('post-request')
+            return redirect("post-request")
+        else:
+            return redirect("post-request")
     else:
         return render(request, "travelerSign.html")

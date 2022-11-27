@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<title>Laggage Party</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+<!-- css link -->
+<link rel="stylesheet" href="{% static 'styles/travelerSign.css' %}" />
+
+<body>
+  <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display: none" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">
+      &times;
+    </button>
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="#" class="w3-bar-item w3-button">Account Information</a>
+    <a href="#" class="w3-bar-item w3-button">My Requests</a>
+    <a href="flightDetails.html" class="w3-bar-item w3-button">Post Requests</a>
+    <a href="flightDetails.html" class="w3-bar-item w3-button">Flight Details</a>
+    <a href="#" class="w3-bar-item w3-button">Complaints</a>
+    <a href="#" class="w3-bar-item w3-button">Payments & Refunds</a>
+    <a href="#" class="w3-bar-item w3-button">Shipping Address</a>
+    <a href="#" class="w3-bar-item w3-button">Track Requests</a>
+    <a href="#" class="w3-bar-item w3-button">Price & Rates</a>
+    <a href="#" class="w3-bar-item w3-button">Support Tickets</a>
+  </div>
+
+  <div id="main">
+    <div style="background-color: #004953">
+      <button style="color: floralwhite" id="openNav" class="w3-button w3-xlarge" onclick="w3_open()">
+        &#9776;
+      </button>
+
+      <div style="background-color: #004953; color: floralwhite" class="w3-container">
+        <h1>Laggage Party</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- sign in modal -->
+    <!-- FORM starts from here -->
+    <!-- !! change the name -->
+    <form class="modal-content" name="registration1" method="POST" onSubmit="return formValidation();">
+      <div class="container">
+        <h1>Sign In</h1>
+
+        <hr />
+        {% csrf_token %}
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" />
+
+        <label for="passid"><b>Password</b></label>
+        <input type="password" id="passid" placeholder="Enter Password" name="psw" required />
+
+        <label>
+          <input type="checkbox" checked="checked" name="remember" style="margin-bottom: 15px" />
+          Remember me
+        </label>
+
+        <div class="clearfix">
+          <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn"
+            style="color: black; border-color: #004953">
+            Cancel
+          </button>
+          <button class="btn signupbtn" type="submit" name="login">
+            Sign In
+          </button>
+        </div>
+      </div>
+    </form>
+  
+  <script src="{% static 'js/indexScript.js' %}"></script>
+  <script src="{% static 'js/travelerSign.js' %}"></script>
+</body>
+
+</html>

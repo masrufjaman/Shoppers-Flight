@@ -1,3 +1,4 @@
+<!-- {% extends 'index.html' %} -->
 <!DOCTYPE html>
 <html>
 <title>Laggage Party</title>
@@ -29,8 +30,10 @@ Refunds</a>
 
 <div style="background-color: #004953;">
   <button style="color: floralwhite;"id="openNav" class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>
-  
-  <div style="background-color: #004953; color: floralwhite;"class="w3-container">
+
+<!-- {% block content %} -->  
+
+<div style="background-color: #004953; color: floralwhite;"class="w3-container">
     <h1>Traveler Flight Details</h1>
   </div>
 </div>
@@ -84,6 +87,7 @@ Refunds</a>
 </form>
 <script src="flightDetails.js"></script>
 
+<!-- {% endblock %}  -->
 
 </body>
 </html>

@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- css link -->
+<link rel="stylesheet" href="postStyle.css">
+<link rel="stylesheet" href="flightDetailstyle.css">
+
+{% block content %}
+<!-- Main Data Table -->
+<div>
+
+  <table id="table">
+
+    <tr>
+      <th>Flight Date</th>
+      <th>Destination Country</th>
+      <th>Origin Country</th>
+      <th>Last Booking Date</th>
+
+    </tr>
+
+    <tr>
+
+      <td>27/10/2022</td>
+      <td>USA</td>
+      <td>Bangladesh</td>
+      <td>30/10/2022</td>
+
+    </tr>
+
+    <tr>
+      <th>Available Vacancy</th>
+      <th>Mobiles</th>
+      <th>Laptops</th>
+      <th>Clothings</th>
+      <th>Chocolates</th>
+    </tr>
+
+    <tr>
+
+      <td>20 kg</td>
+      <td>2 Pcs</td>
+      <td>2 Pcs</td>
+      <td>5 kg</td>
+      <td>3 kg</td>
+    </tr>
+
+
+
+  </table>
+</div>
+
+
+<!-- Update Button -->
+<div class="updateBtn">
+  <button onclick="editTableDisplay()">Update data</button>
+</div>
+
+<!-- Edit table -->
+<div class="editTable">
+  <div class="left">Available Vacancy: </div>
+  <div class="right"><input type="text" name="avac" id="avac"></div><br><br>
+  <div class="left">Mobiles: </div>
+  <div class="right"><input type="text" name="mobile" id="mobile"></div><br><br>
+  <div class="left">Laptops: </div>
+  <div class="right"><input type="text" name="laptops" id="laptops"></div><br><br>
+  <div class="left">Clothings: </div>
+  <div class="right"><input type="text" name="clothing" id="clothing"></div><br><br>
+  <div class="left">Chocolates: </div>
+  <div class="right"><input type="text" name="chocolates" id="chocolates"></div><br><br>
+  <button onclick="editRow();" class="editRowBtn">Update</button><br><br>
+</div>
+
+
+<script src="postScript.js"></script>
+{% endblock %}

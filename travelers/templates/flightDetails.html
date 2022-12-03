@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+<!-- CSS link -->
+<link rel="stylesheet" href="flightDetailStyle.css">
+
+<!-- TODO: sunjida.fronika@northsouth.edu -->
+<!-- <link rel='stylesheet' href='js-form-validation.css' type='text/css' /> -->
+<!-- <script src="sample-registration-form-validation.js"></script> -->
+<!-- <body onload="document.registration.flightDate.focus();"></body>
+     is this important??? -->
+
+{% block content %}
+<!-- Sign Up form -->
+<form name='registration' onSubmit="return formValidation();">
+  <ul>
+    <li><label for="flightDate">Flight Date:</label></li>
+    <li><input type="date" name="flightDate" size="30" required /></li>
+
+    <li><label for="arrivaltDate">Arrival Date:</label></li>
+    <li><input type="date" name="arrivalDate" size="30" required /></li>
+
+    <li><label for="country">Destination Country:</label></li>
+    <li><select name="country">
+        <option selected="" value="Default">(Please select a country)</option>
+        <option value="AF">Bangladesh</option>
+        <option value="AL">Canada</option>
+        <option value="DZ">China</option>
+        <option value="AS">Australia</option>
+        <option value="AD">USA</option>
+      </select></li>
+
+    <li><label for="Ocountry">Origin Country:</label></li>
+    <li><select name="Ocountry">
+        <option selected="" value="Default">(Please select a country)</option>
+        <option value="AF">Bangladesh</option>
+        <option value="AL">Canada</option>
+        <option value="DZ">China</option>
+        <option value="AS">Australia</option>
+        <option value="AD">USA</option>
+      </select></li>
+
+    <li><label for="passport">Passport No.:</label></li>
+    <li><input type="text" name="passport" pattern="(B)(M)[0-9]{7}" placeholder="BM 7-digits" size="30" required />
+    </li>
+
+    <li><label for="ticket">Ticket No.:</label></li>
+    <li><input type="text" name="ticket" pattern="[0-9]{13}" placeholder="13-digits" size="30" required /></li>
+
+    <li><label for="username">Airlines Name:</label></li>
+    <li><input type="text" name="username" size="30" required /></li>
+
+    <li><label for="email">Email:</label></li>
+    <li><input type="text" name="email" size="30" /></li>
+
+    <li><label for="phone">Phone:</label></li>
+    <li><input type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder="Enter 11 digit phone no." size="30"
+        required /></li>
+
+
+
+    <li><input type="submit" name="submit" value="Save Details"
+        style="background-color:#004953;color: white; border-color: #004953;" onClick="" /></li>
+  </ul>
+</form>
+
+<!-- JS link -->
+<script src="flightDetails.js"></script>
+{% endblock %}

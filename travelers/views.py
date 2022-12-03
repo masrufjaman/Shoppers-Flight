@@ -78,3 +78,11 @@ def sign_in(request):
             return redirect("sign_in")
     else:
         return render(request, 'signIn.html')
+
+
+def sign_out(request):
+    try:
+        del request.session['email']
+    except:
+        return render(request, 'home.html')
+    return render(request, 'home.html')

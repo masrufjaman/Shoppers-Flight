@@ -17,5 +17,5 @@ urlpatterns = [
     # account urls
     path("sign-up", views.sign_up, name="sign-up"),
     path("sign-in", views.sign_in, name="sign_in"),
-    # path("logout", views.logout, name="logout"),
+    path("sign-out", views.sign_out, name="sign_out"),
 ]

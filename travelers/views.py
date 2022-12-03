@@ -17,7 +17,7 @@ def my_requests(request):
 
 
 def post_requests(request):
-    return render(request, "workOnPage.html")
+    return render(request, "postReq.html")
 
 
 def flight_details(request):

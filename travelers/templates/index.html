@@ -17,22 +17,22 @@
       <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">
         &times;
       </button>
-      <a href="{% url 'land-page'%}" class="w3-bar-item w3-button">Home</a>
-      <a href="#" class="w3-bar-item w3-button">Account Information</a>
-      <a href="#" class="w3-bar-item w3-button">My Requests</a>
+      <a href="{% url 'home' %}" class="w3-bar-item w3-button">Home</a>
+      <a href="{% url 'account_info' %}" class="w3-bar-item w3-button">Account Information</a>
+      <a href="{% url 'my_requests' %}" class="w3-bar-item w3-button">My Requests</a>
       <a href="{% url 'post-request'%}" class="w3-bar-item w3-button"
         >Post Requests</a
       >
-      <a href="{% url 'post-request'%}" class="w3-bar-item w3-button"
+      <a href="{% url 'flight_details' %}" class="w3-bar-item w3-button"
         >Flight Details</a
       >
-      <a href="#" class="w3-bar-item w3-button">Complaints</a>
-      <a href="#" class="w3-bar-item w3-button">Payments & Refunds</a>
-      <a href="#" class="w3-bar-item w3-button">Shipping Address</a>
-      <a href="#" class="w3-bar-item w3-button">Track Requests</a>
-      <a href="#" class="w3-bar-item w3-button">Price & Rates</a>
-      <a href="#" class="w3-bar-item w3-button">Support Tickets</a>
-      <a href="{% url 'login'%}" class="w3-bar-item w3-button">Logout</a>
+      <a href="{% url 'complaints' %}" class="w3-bar-item w3-button">Complaints</a>
+      <a href="{% url 'payments_and_refunds' %}" class="w3-bar-item w3-button">Payments & Refunds</a>
+      <a href="{% url 'shipping_address' %}" class="w3-bar-item w3-button">Shipping Address</a>
+      <a href="{% url 'track_request' %}" class="w3-bar-item w3-button">Track Requests</a>
+      <a href="{% url 'pricing' %}" class="w3-bar-item w3-button">Price & Rates</a>
+      <a href="{% url 'support_tickets' %}" class="w3-bar-item w3-button">Support Tickets</a>
+      <a href="{% url 'logout'%}" class="w3-bar-item w3-button">Logout</a>
     </div>
 
     <div id="main">

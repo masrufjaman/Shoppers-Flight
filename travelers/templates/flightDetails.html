@@ -10,16 +10,18 @@
 
 {% block content %}
 <!-- Sign Up form -->
-<form name='registration' onSubmit="return formValidation();">
+ 
+<form  method= "POST" name='registration' onSubmit="return formValidation();">
+  {% csrf_token %}
   <ul>
     <li><label for="flightDate">Flight Date:</label></li>
-    <li><input type="date" name="flightDate" size="30" required /></li>
+    <li><input type="date" name="flight_date" size="30" required /></li>
 
     <li><label for="arrivaltDate">Arrival Date:</label></li>
-    <li><input type="date" name="arrivalDate" size="30" required /></li>
+    <li><input type="date" name="arrival_date" size="30" required /></li>
 
     <li><label for="country">Destination Country:</label></li>
-    <li><select name="country">
+    <li><select name="destination_country">
         <option selected="" value="Default">(Please select a country)</option>
         <option value="AF">Bangladesh</option>
         <option value="AL">Canada</option>
@@ -29,7 +31,7 @@
       </select></li>
 
     <li><label for="Ocountry">Origin Country:</label></li>
-    <li><select name="Ocountry">
+    <li><select name="origin_country">
         <option selected="" value="Default">(Please select a country)</option>
         <option value="AF">Bangladesh</option>
         <option value="AL">Canada</option>
@@ -38,30 +40,38 @@
         <option value="AD">USA</option>
       </select></li>
 
-    <li><label for="passport">Passport No.:</label></li>
-    <li><input type="text" name="passport" pattern="(B)(M)[0-9]{7}" placeholder="BM 7-digits" size="30" required />
-    </li>
+    {% comment %} <li><label for="passport">Passport No.:</label></li> {% endcomment %}
+    {% comment %} <li><input type="text" name="passport_no" placeholder="BM 7-digits" size="30" required /> {% endcomment %}
+    {% comment %} <li><input type="text" name="passport_no" pattern="(B)(M)[0-9]{7}" placeholder="BM 7-digits" size="30" required /> {% endcomment %}
+    {% comment %} </li> {% endcomment %}
 
     <li><label for="ticket">Ticket No.:</label></li>
-    <li><input type="text" name="ticket" pattern="[0-9]{13}" placeholder="13-digits" size="30" required /></li>
+    <li><input type="text" name="ticket_no" placeholder="13-digits" size="30" required /></li>
+    {% comment %} <li><input type="text" name="ticket_no" pattern="[0-9]{13}" placeholder="13-digits" size="30" required /></li> {% endcomment %}
 
     <li><label for="username">Airlines Name:</label></li>
-    <li><input type="text" name="username" size="30" required /></li>
+    <li><input type="text" name="airlines_name" size="30" required /></li>
 
     <li><label for="email">Email:</label></li>
     <li><input type="text" name="email" size="30" /></li>
 
     <li><label for="phone">Phone:</label></li>
-    <li><input type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder="Enter 11 digit phone no." size="30"
+    <li><input type="tel" id="phone" name="contact_no" pattern="[0-9]{11}" placeholder="Enter 11 digit phone no." size="30"
         required /></li>
 
 
 
     <li><input type="submit" name="submit" value="Save Details"
         style="background-color:#004953;color: white; border-color: #004953;" onClick="" /></li>
-  </ul>
+        {%if messages%}
+        {%for messages in messages%}
+        <h2 style="color: blue;">{{messages}}</h2>
+        {% endfor %}
+        {%endif%}
+  
+      </ul>
 </form>
 
 <!-- JS link -->
-<script src="flightDetails.js"></script>
+{% comment %} <script src="flightDetails.js"></script> {% endcomment %}
 {% endblock %}

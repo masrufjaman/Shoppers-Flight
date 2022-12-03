@@ -13,7 +13,8 @@ class TravelersPost(models.Model):
 
 
 class Traveler(models.Model):
-    fullname = models.CharField(max_length=50)
+    username = models.CharField(max_length=50)
     email = models.EmailField()
     phone = models.IntegerField()
     password = models.CharField(max_length=50)
+    user_type = models.CharField(max_length=50)

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- css link -->
+<link rel="stylesheet" href="{% static 'styles/signInStyle.css' %}" />
+
+{% block content %}
+<div class="form-login">
+    <p class="lead">Login</p>
+    <form action="" method="POST">
+
+        <input type="text" placeholder="username" name="">
+        <input type="password" placeholder="password" name="">
+        <select>
+            <option></option>
+            <option>traveler</option>
+            <option>customer</option>
+        </select>
+        <input type="submit" value="login" name="">
+    </form>
+</div>
+{% endblock %}

@@ -102,6 +102,3 @@ return false;
 // window.location.href= 'index.html'
 // return true;
 // }
-
-
-

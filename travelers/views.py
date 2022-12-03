@@ -50,19 +50,19 @@ def support_tickets(request):
 
 def sign_up(request):
     if request.method == "POST":
-        fullname = request.POST["fullname"]
+        username = request.POST["username"]
         email = request.POST["email"]
         phone = request.POST["phone"]
-        password = request.POST["psw"]
+        password = request.POST["password"]
+        user_type = request.POST["user_type"]
 
-        user = Traveler.objects.create(
-            fullname=fullname, email=email, phone=phone, password=password
+        new_user = Traveler.objects.create(
+            username=username, email=email, phone=phone, password=password, user_type=user_type
         )
-        user.save()
-
-        return redirect("post-request")
+        new_user.save()
+        return redirect("post_requests")
     else:
-        return render(request, "travelerSign.html")
+        return render(request, "signUp.html")
 
 
 def sign_in(request):
@@ -79,4 +79,4 @@ def sign_in(request):
             #     request, f'Invalid credentials...')
             return redirect("sign-up")
     else:
-        return render(request, "login.html")
+        return render(request, "signIn.html")

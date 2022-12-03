@@ -5,47 +5,47 @@ from django.contrib.auth.models import User, auth
 
 
 def home(request):
-    return render(request, "index.html")
+    return render(request, "home.html")
 
 
 def account_info(request):
-    return render(request, "flightDetails.html")
-    
-    
+    return render(request, "workOnPage.html")
+
+
 def my_requests(request):
-    return render(request, "flightDetails.html")
-    
-    
+    return render(request, "workOnPage.html")
+
+
 def post_requests(request):
-    return render(request, "flightDetails.html")
-    
-    
+    return render(request, "workOnPage.html")
+
+
 def flight_details(request):
     return render(request, "flightDetails.html")
-    
-    
+
+
 def complaints(request):
-    return render(request, "flightDetails.html")
-    
-    
+    return render(request, "workOnPage.html")
+
+
 def payments_and_refunds(request):
-    return render(request, "flightDetails.html")
-    
-    
+    return render(request, "workOnPage.html")
+
+
 def shipping_address(request):
-    return render(request, "flightDetails.html")
-    
-    
+    return render(request, "workOnPage.html")
+
+
 def track_request(request):
-    return render(request, "flightDetails.html")
-    
-    
+    return render(request, "workOnPage.html")
+
+
 def pricing(request):
-    return render(request, "flightDetails.html")
-    
-    
+    return render(request, "workOnPage.html")
+
+
 def support_tickets(request):
-    return render(request, "flightDetails.html")
+    return render(request, "workOnPage.html")
 
 
 def sign_up(request):
@@ -56,7 +56,7 @@ def sign_up(request):
         password = request.POST["psw"]
 
         user = Traveler.objects.create(
-            fullname=fullname, email=email, phone=phone,password=password
+            fullname=fullname, email=email, phone=phone, password=password
         )
         user.save()
 
@@ -65,7 +65,7 @@ def sign_up(request):
         return render(request, "travelerSign.html")
 
 
-def login(request):
+def sign_in(request):
     if request.method == "POST":
         username = request.POST["email"]
         password = request.POST["psw"]

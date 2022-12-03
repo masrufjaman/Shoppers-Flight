@@ -4,11 +4,47 @@ from .models import Traveler
 from django.contrib.auth.models import User, auth
 
 
-def land_page(request):
+def home(request):
     return render(request, "index.html")
 
 
-def post_request(request):
+def account_info(request):
+    return render(request, "flightDetails.html")
+    
+    
+def my_requests(request):
+    return render(request, "flightDetails.html")
+    
+    
+def post_requests(request):
+    return render(request, "flightDetails.html")
+    
+    
+def flight_details(request):
+    return render(request, "flightDetails.html")
+    
+    
+def complaints(request):
+    return render(request, "flightDetails.html")
+    
+    
+def payments_and_refunds(request):
+    return render(request, "flightDetails.html")
+    
+    
+def shipping_address(request):
+    return render(request, "flightDetails.html")
+    
+    
+def track_request(request):
+    return render(request, "flightDetails.html")
+    
+    
+def pricing(request):
+    return render(request, "flightDetails.html")
+    
+    
+def support_tickets(request):
     return render(request, "flightDetails.html")
 
 

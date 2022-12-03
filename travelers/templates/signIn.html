@@ -7,15 +7,15 @@
 <div class="form-login">
     <p class="lead">Login</p>
     <form action="" method="POST">
-
-        <input type="text" placeholder="username" name="">
-        <input type="password" placeholder="password" name="">
-        <select>
+        {% csrf_token %}
+        <input type="email" placeholder="email" name="email">
+        <input type="password" placeholder="password" name="password">
+        <select name="user_type">
             <option></option>
-            <option>traveler</option>
-            <option>customer</option>
+            <option value="traveler">traveler</option>
+            <option value="customer">customer</option>
         </select>
-        <input type="submit" value="login" name="">
+        <input type="submit" value="Sign-In" name="">
     </form>
 </div>
 {% endblock %}

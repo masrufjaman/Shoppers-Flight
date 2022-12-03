@@ -67,16 +67,14 @@ def sign_up(request):
 
 def sign_in(request):
     if request.method == "POST":
-        username = request.POST["email"]
-        password = request.POST["psw"]
+        email = request.POST["email"]
+        password = request.POST["password"]
 
-        user = auth.authenticate(username=username, password=password)
-        if user is not None:
-            auth.login(request, user)
-            return redirect("post-request")
-        else:
-            # messages.error(
-            #     request, f'Invalid credentials...')
-            return redirect("sign-up")
+        try:
+            user_details = Traveler.objects.get(email=email, password=password)
+            request.session['email']=user_details.email
+            return redirect("post_requests")
+        except Traveler.DoesNotExist as e:
+            return redirect("sign_in")
     else:
-        return render(request, "signIn.html")
+        return render(request, 'signIn.html')

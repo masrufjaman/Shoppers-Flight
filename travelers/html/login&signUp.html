@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>seek coding</title>
+    <title>shoppers flight</title>
      <!--- css file----->
     <link rel="stylesheet" href="login&signUp.css">
    
@@ -38,21 +38,46 @@
                     <input type='text'class='input-field'placeholder='Email Id'>
 		             
                       <input type='password'class='input-field'placeholder='Enter Password'>
+                      <div>
+                          <select name="user_type">
+            <option value="traveler">Traveler</option>
+            <option value="customer">Customer</option>
+        </select>
+                      </div>
+                      
 		              
-                       <input type='checkbox' checked="checked" class='check-box'><span>Remember Password</span>
-		                    
-                            <button type='submit'class='submit-btn'>Log in</button>
+                      <div style="color: #666; font-size: 14px;">
+                       <input type='checkbox' checked="checked" class='check-box'>Remember Password
+		                    </div>
+                            <button type='button'class='submit-btn' onclick="window.location='Udash.html'">Log in</button>
+
+
+                            <button type='button'class='cancel-btn'onclick="window.location='index.html'" >Cancel</button>
 		 </form>
 
 <!--- Registration form----->
 		 <form id='register' class='input-group-register'>
-		     <input type='text'class='input-field'placeholder='First Name' required>
-		     <input type='text'class='input-field'placeholder='Last Name ' required>
-		     <input type='email'class='input-field'placeholder='Email Id' required>
-		     <input type='password'class='input-field'placeholder='Enter Password' required>
-		     <input type='password'class='input-field'placeholder='Confirm Password'  required>
-		     <input type='checkbox'checked="checked" class='check-box'><span>I agree to the terms and conditions</span>
-                    <button type='submit'class='submit-btn'>Register</button>
+		     <input type='text'class='input-field'placeholder='First Name' >
+		     
+		     <input type='email'class='input-field'placeholder='Email Id' >
+
+             <input type='text'class='input-field'placeholder='Contact no' >
+
+		     <input type='password'class='input-field'placeholder='Enter Password' >
+
+              <div>
+                          <select name="user_type">
+            <option value="traveler">Traveler</option>
+            <option value="customer">Customer</option>
+        </select>
+                      </div>
+
+             <div  style="color: #666; font-size: 14px;">
+		     <input type='checkbox'checked="checked" class='check-box' >I agree to the terms and conditions
+         </div>
+                    <button type='button'class='submit-btn' onclick="window.location='Udash.html'">Register</button>
+
+                    <button type='button'class='cancel-btn' onclick="window.location='index.html'">Cancel</button>
 	         </form>
             </div>
         </div>

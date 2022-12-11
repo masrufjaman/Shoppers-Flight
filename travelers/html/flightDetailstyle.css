@@ -1,0 +1,48 @@
+.full-page
+{
+    height: 100%;
+	width: 100%;
+	background-image: linear-gradient(0deg, rgba(55, 102, 102,1), 
+    rgba(30, 78, 78, 1), rgba(0, 55, 55,1), 
+    rgba(0, 33, 34,1), rgba(0, 1, 12,1), 
+    rgba(0, 0, 0,1));
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+}
+
+form li {
+list-style: none;
+
+margin-bottom: 5px;
+}
+
+form ul li label{
+
+float: left;
+clear: left;
+width: 150px;
+text-align: left;
+margin-right: 10px;
+font-family: Arial;
+font-size:15px;
+color:  #BFBFBF;
+}
+
+form ul li input, select, span {
+display: block;
+border-color: #004953;
+float: left;
+margin-bottom: 20px;
+}
+
+[type="submit"] {
+clear: left;
+margin: 20px 0 0 230px;
+font-size:15px
+}
+
+p {
+margin-left: 40px;
+
+}

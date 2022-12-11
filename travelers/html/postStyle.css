@@ -7,10 +7,10 @@
 {
     height: 100%;
 	width: 100%;
-	background-image: linear-gradient(rgba(55, 102, 102,0.90), 
-    rgba(30, 78, 78, 0.90), rgba(0, 55, 55,0.90), 
-    rgba(0, 33, 34,0.90), rgba(0, 1, 12,0.90), 
-    rgba(0, 0, 0,0.90));
+	background-image: linear-gradient(rgba(55, 102, 102,0.80), 
+    rgba(30, 78, 78, 0.80), rgba(0, 55, 55,0.80), 
+    rgba(0, 33, 34,0.80), rgba(0, 1, 12,0.85), 
+    rgba(0, 0, 0,0.81));
 	background-position: center;
 	background-size: cover;
 	position: absolute;
@@ -31,7 +31,8 @@ table tr{
 	font-family: Arial;
 	cursor: pointer;
 	transition: all .25s ease-in-out;
-	font-size: 14px;
+	font-size: 15px;
+
 }
 table tr:hover{
 	background-color: #ddd;

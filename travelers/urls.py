@@ -3,7 +3,9 @@ from . import views
 
 urlpatterns = [
     # sidebar urls
-    path("", views.home, name="home"),
+    # everyone can see this page
+    path("", views.public_view, name="shoppers_flight"),
+    # path("", views.home, name="home"),
     path("account-info", views.account_info, name="account_info"),
     path("my-requests", views.my_requests, name="my_requests"),
     path("post-requests", views.post_requests, name="post_requests"),
@@ -14,8 +16,5 @@ urlpatterns = [
     path("track-request", views.track_request, name="track_request"),
     path("pricing", views.pricing, name="pricing"),
     path("support-tickets", views.support_tickets, name="support_tickets"),
-    # account urls
-    path("sign-up", views.sign_up, name="sign-up"),
-    path("sign-in", views.sign_in, name="sign_in"),
     # path("logout", views.logout, name="logout"),
 ]

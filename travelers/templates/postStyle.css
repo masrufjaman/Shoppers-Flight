@@ -55,14 +55,14 @@ tr:nth-child(odd){
 .updateBtn button{
 	background-color: #004953;
 	padding: 5px 10px;
+	width: 30%;
 	border: 1px solid black;
 	color: white;
 	margin: 10px 0;
-	border-radius: 5px;
+	border-radius: 20px;
 }
 .updateBtn button:hover{
-	background: lightgray;
-	color: black;
+	background: #126180;
 	transition: .5s;
 }
 
@@ -74,10 +74,10 @@ tr:nth-child(odd){
 	margin: 0 auto;
 
 }
-.left{
+.Up-left{
 	float: left;
 }
-.right{
+.Up-right{
 	float: right;
 }
 .editRowBtn{
@@ -85,10 +85,10 @@ tr:nth-child(odd){
 	color: white;
 	border: 1px solid black;
 	padding: 5px 10px;
-	border-radius: 5px;
+	border-radius: 20px;
 }
 .editRowBtn:hover{
-	background-color: lightgray;
-	color: black;
+	background-color: #126180;
+	
 	transition: .5s;
 }

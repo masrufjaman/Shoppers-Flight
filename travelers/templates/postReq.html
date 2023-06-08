@@ -1,39 +1,121 @@
 <!DOCTYPE html>
-<html>
-<title>Laggage Party</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="postStyle.css">
-  <link rel="stylesheet" href="flightDetailstyle.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>Shoppers Flight</title>
+    <link rel="stylesheet" href="Udashstyle.css">
+    <link rel="stylesheet" href="flightDetailstyle.css">
+    <link rel="stylesheet" href="postStyle.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+<body onload="document.registration.flightDate.focus();">
+    
+   <input type="checkbox" id="menu-toggle">
+    <div class="sidebar">
+        <div class="side-header">
+            <h3 >SF<span></span></h3>
+        </div>
+        
+        <div class="side-content">
+            <div class="profile">
+                <div class="profile-img bg-img" style="background-image: url(https://i.pinimg.com/originals/cc/26/c6/cc26c619b2275ab469816b2cca895ea0.jpg)"></div>
+                <h4>Sunjida</h4>
+                <small>Traveler</small>
+            </div>
 
-<body >
+            <div class="side-menu">
+                <ul>
+                    <li>
+                       <a href="Udash.html" >
+                            <span class="las la-home"></span>
+                            <small>Dashboard</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="userProfile.html">
+                            <span class="las la-user-alt"></span>
+                            <small>Profile</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="postReq.html" class="active">
+                            <span class="las la-envelope"></span>
+                            <small>Post Request</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="flightDetails.html">
+                            <span class="las la-plane"></span>
+                            <small>Flight Details</small>
+                        </a>
+                    </li>
 
-<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;" id="mySidebar">
-  <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">&times;</button>
-  <a href="index.html" class="w3-bar-item w3-button">Home</a>
-  <a href="#" class="w3-bar-item w3-button">Account Information</a>
-  <a href="#" class="w3-bar-item w3-button">My Requests</a>
-  <a href="flightDetails.html" class="w3-bar-item w3-button">Post Requests</a>
-  <a href="flightDetails.html" class="w3-bar-item w3-button">Flight Details</a>
-  <a href="#" class="w3-bar-item w3-button">Complaints</a>
-  <a href="#" class="w3-bar-item w3-button">Payments & Refunds</a>
-  <a href="#" class="w3-bar-item w3-button">Shipping Address</a>
-  <a href="#" class="w3-bar-item w3-button">Track Requests</a>
-  <a href="#" class="w3-bar-item w3-button">Price & Rates</a>
-  <a href="#" class="w3-bar-item w3-button">Support Tickets</a>
-</div>
+                    <li>
+                       <a href="payment.html" >
+                            <span class="las la-clipboard-list"></span>
+                            <small>Paymrents</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="order.html" >
+                            <span class="las la-shopping-cart"></span>
+                            <small>Orders</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="index.html">
+                            <span class="las la-sign-out-alt"></span>
+                            <small>Logout</small>
+                        </a>
+                    </li>
 
-<div id="main">
+                </ul>
+            </div>
+        </div>
+    </div>
+  <div class="main-content">
+        
+        <header>
+            <div class="header-content">
+                <label for="menu-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+                
+                <div class="header-menu">
+                    <label for="">
+                        <span class="las la-search"></span>
+                    </label>
+                    
+                    <div class="notify-icon">
+                        <span class="las la-envelope"></span>
+                        <span class="notify">4</span>
+                    </div>
+                    
+                    <div class="notify-icon">
+                        <span class="las la-bell"></span>
+                        <span class="notify">3</span>
+                    </div>
+                    
+                    <div class="user">
+                        <div class="bg-img" style="background-image: url(https://i.pinimg.com/originals/cc/26/c6/cc26c619b2275ab469816b2cca895ea0.jpg);cursor: pointer;"onclick="window.location='userProfile.html'">
+                        </div>
+                        <button type="button" onclick="window.location='index.html'"style="background:transparent;border: none;cursor: pointer;">
+                        <span class="las la-power-off"></span>
+                        <span>Logout</span>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+<main>
+            
+            <div class="page-header">
+                <h1>Post Request</h1>
+            </div>
 
-<div style="background-color: #004953;">
-  <button style="color: floralwhite;"id="openNav" class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>
-  
-  <div style="background-color: #004953; color: floralwhite;"class="w3-container">
-    <h1>Post Request</h1>
-  </div>
-</div>
-
-     <!-- Main Data Table -->
+ <!-- Main Data Table -->
         <div >
         
             <table id="table">
@@ -85,17 +167,23 @@
 
         <!-- Edit table -->
         <div class="editTable">
-            <div class="left">Available Vacancy: </div><div class="right"><input type="text" name="avac" id="avac" ></div><br><br>
-            <div class="left">Mobiles: </div><div class="right"><input type="text" name="mobile" id="mobile"></div><br><br>
-            <div class="left">Laptops: </div><div class="right"><input type="text" name="laptops" id="laptops"></div><br><br>
-            <div class="left">Clothings: </div><div class="right"><input type="text" name="clothing" id="clothing"></div><br><br>
-             <div class="left">Chocolates: </div><div class="right"><input type="text" name="chocolates" id="chocolates"></div><br><br>
+            <div class="Up-left">Available Vacancy: </div>
+            <div class="Up-right"><input type="text" name="avac" id="avac" ></div><br><br>
+            <div class="Up-left">Mobiles: </div>
+            <div class="Up-right"><input type="text" name="mobile" id="mobile"></div><br><br>
+            <div class="Up-left">Laptops: </div>
+            <div class="Up-right"><input type="text" name="laptops" id="laptops"></div><br><br>
+            <div class="Up-left">Clothings: </div>
+            <div class="Up-right"><input type="text" name="clothing" id="clothing"></div><br><br>
+             <div class="Up-left">Chocolates: </div>
+             <div class="Up-right"><input type="text" name="chocolates" id="chocolates"></div><br><br>
             <button onclick="editRow();" class="editRowBtn">Update</button><br><br>
         </div>       
 
-      
-<script src="indexScript.js"></script>
-<script src="postScript.js"></script>
 
-</body>
+</main>
+</div>
+
+<script src="D:\Documents\Semesters\Fall'22\CSE499A\LP\js\postScript.js"></script>
+  </body>
 </html>

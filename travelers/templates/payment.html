@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <title>Shoppers Flight</title>
-      <link rel="stylesheet" href="flightDetailstyle.css">
+    <link rel="stylesheet" href="Udashstyle.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 </head>
 <body >
@@ -43,20 +43,20 @@
                         </a>
                     </li>
                     <li>
-                       <a href="flightDetails.html"class="active">
+                       <a href="flightDetails.html">
                             <span class="las la-plane"></span>
                             <small>Flight Details</small>
                         </a>
                     </li>
 
                     <li>
-                       <a href="payment.html" >
+                       <a href="payment.html" class="active">
                             <span class="las la-clipboard-list"></span>
                             <small>Paymrents</small>
                         </a>
                     </li>
                     <li>
-                       <a href="order.html" >
+                       <a href="order.html">
                             <span class="las la-shopping-cart"></span>
                             <small>Orders</small>
                         </a>
@@ -108,58 +108,22 @@
         </header>
         
 <main>
-             <div class="page-header">
-                <h1>Flight Details</h1>
+            
+            <div class="page-header">
+                <h1>Payment</h1>
             </div>
+            
 
-<div class="container">
-  <div class="inputs">
-    <label for="flightDate">Flight Date:</label>
-    <input type="date" name="flightDate" size="30"/>
 
-    <label for="arrivaltDate">Arrival Date:</label>
-    <input type="date" name="arrivalDate" size="30"/>
 
-    <label for="country">Destination Country:</label>
-   <select name="country" >
-<option selected="" value="Default">(Please select a country)</option>
-<option value="AF">Bangladesh</option>
-<option value="AL">Canada</option>
-<option value="DZ">China</option>
-<option value="AS">Australia</option>
-<option value="AD">USA</option>
-</select>
-
-<label for="Ocountry">Origin Country:</label>
-<select name="Ocountry" >
-<option selected="" value="Default">(Please select a country)</option>
-<option value="AF">Bangladesh</option>
-<option value="AL">Canada</option>
-<option value="DZ">China</option>
-<option value="AS">Australia</option>
-<option value="AD">USA</option>
-</select>
-
-<label for="passport">Passport No.:</label>
-<input type="text" name="passport" pattern="(B)(M)[0-9]{7}" placeholder="BM 7-digits"  size="30"/>
-
-<label for="ticket">Ticket No.:</label>
-<input type="text" name="ticket" pattern="[0-9]{13}" placeholder="13-digits"  size="30"/>
-
-<label for="username">Airlines Name:</label>
-<input type="text" name="username" size="30"/>
-
-<label for="email">Email:</label>
-<input type="email" placeholder="example@test.com"/>
-
-<label for="phone">Phone:</label>
-<input type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder="Enter 11 digit phone no."  size="30"/>
-
-<button class="btn" type="submit"  onClick="window.location='postReq.html'" >Submit</button>
-  </div>
-</div>
 
 </main>
 </div>
-  </body>
+
+
+
+
+
+    
+    </body>
 </html>
